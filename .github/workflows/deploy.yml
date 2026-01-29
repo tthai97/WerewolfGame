@@ -1,4 +1,4 @@
-name: Build and deploy to GitHub Pages
+name: Build and deploy to GitHub Pages (Vite)
 
 on:
   push:
@@ -11,29 +11,28 @@ permissions:
   id-token: write
 
 jobs:
-  build-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "18"
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
+      - name: Build (Vite)
         run: npm run build
 
-      - name: Configure Pages
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload artifact (dist)
+      - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./dist
-
-  # Deployment is handled by the pages environment once artifact is uploaded
+          path: "./dist"
