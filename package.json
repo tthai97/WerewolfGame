@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  },
+  "homepage": "http://tthai97.github.io/WerewolfGame",
+  "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+  }
+}
