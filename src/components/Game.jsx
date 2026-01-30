@@ -53,15 +53,6 @@ export default function Game({ config, onReset }) {
         if (!wasProtectedByBodyguard && !wasProtectedByWitch) {
           allDeaths.push(lastNightVictim.id);
         }
-
-
-        // const isBodyguardAlive = players.some((p) => p.alive && p.role === "bodyguard");
-        // const isWitchAlive = players.some((p) => p.alive && p.role === "witch");
-        // const isBodyguardProtectedSucceed = isBodyguardAlive && isBodyguardProtected;
-        // const isWitchProtectedSucceed = isWitchAlive && isWitchProtected;
-        // if (!isBodyguardProtectedSucceed && !isWitchProtectedSucceed) {
-        //   allDeaths.push(lastNightVictim.id);
-        // }
       }
       
       const finalDeaths = Array.from(new Set(allDeaths));
