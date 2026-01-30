@@ -247,7 +247,6 @@ export default function Game({ config, onReset }) {
           setMessage(`${lastNightVictim.name} was protected by the Bodyguardor Witch!`);
         }
 
-
         // const aliveWolves = players.some((p) => p.alive && p.role === "werewolf").length;
         // const isBodyguardAlive = players.some((p) => p.alive && p.role === "bodyguard");
         // const isWitchAlive = players.some((p) => p.alive && p.role === "witch");
